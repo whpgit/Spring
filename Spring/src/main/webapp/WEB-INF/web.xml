@@ -1,0 +1,18 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>spring</display-name>
+
+    <servlet>
+        <servlet-name>DispacherServlet</servlet-name>
+        <servlet-class>cn.smbms.servlet.DispacherServlet</servlet-class>
+        <!--执行顺序   0代码启动tomcat的时候他会去执行我的servlet的init()方法-->
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispacherServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
